@@ -31,6 +31,7 @@ namespace SO_FCFS
         {
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox_finishLine = new System.Windows.Forms.PictureBox();
+            this.lbl_waiting = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_finishLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,6 +58,16 @@ namespace SO_FCFS
             this.pictureBox_finishLine.TabStop = false;
             this.pictureBox_finishLine.Click += new System.EventHandler(this.pictureBox_finishLine_Click);
             // 
+            // lbl_waiting
+            // 
+            this.lbl_waiting.AutoSize = true;
+            this.lbl_waiting.Location = new System.Drawing.Point(31, 323);
+            this.lbl_waiting.Name = "lbl_waiting";
+            this.lbl_waiting.Size = new System.Drawing.Size(93, 13);
+            this.lbl_waiting.TabIndex = 3;
+            this.lbl_waiting.Text = "En cola de espera";
+            this.lbl_waiting.Click += new System.EventHandler(this.label1_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SO_FCFS.Properties.Resources.running_horse;
@@ -74,6 +85,7 @@ namespace SO_FCFS
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 450);
+            this.Controls.Add(this.lbl_waiting);
             this.Controls.Add(this.pictureBox_finishLine);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -82,14 +94,15 @@ namespace SO_FCFS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_finishLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox_finishLine;
+        private System.Windows.Forms.Label lbl_waiting;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
